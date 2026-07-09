@@ -48,6 +48,9 @@ jobs:
         run: pnpm run typecheck
       
       - name: Build resume app
+        env:
+          PORT: 4173
+          BASE_PATH: /resume/
         run: pnpm run build:resume
       
       - name: Build API server
