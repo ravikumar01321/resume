@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "hello": "tsx ./src/hello.ts",
+    "generate-resume": "tsx ./src/generate-resume-files.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
     "@types/node": "catalog:",
+    "docx": "^9.7.1",
+    "pdf-lib": "^1.17.1",
     "tsx": "catalog:"
   }
 }

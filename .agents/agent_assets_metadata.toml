@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "-t3PTsOiWtvPKKktDMgdH"
+uri = "file://scripts/output/ravi-kumar-resume.pdf"
+type = "pdf"
+title = "Ravi Kumar - Resume (PDF)"
+
+[[outputs]]
+id = "cdzv2iUaec0XaS0Sy3au7"
+uri = "file://scripts/output/ravi-kumar-resume.docx"
+type = "word_document"
+title = "Ravi Kumar - Resume (DOCX)"

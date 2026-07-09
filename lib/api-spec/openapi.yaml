@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: resume
+    description: Resume content and downloads
 paths:
   /healthz:
     get:
@@ -24,6 +26,59 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /resume:
+    get:
+      operationId: getResume
+      tags: [resume]
+      summary: Get resume content
+      description: Returns structured resume data for rendering the resume page
+      responses:
+        "200":
+          description: Resume data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Resume"
+  /download/resume.pdf:
+    get:
+      operationId: downloadResumePdf
+      tags: [resume]
+      summary: Download resume as PDF
+      description: Returns the generated resume PDF file
+      responses:
+        "200":
+          description: Resume PDF file
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+        "404":
+          description: Resume PDF not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /download/resume.docx:
+    get:
+      operationId: downloadResumeDocx
+      tags: [resume]
+      summary: Download resume as DOCX
+      description: Returns the generated resume DOCX file
+      responses:
+        "200":
+          description: Resume DOCX file
+          content:
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+        "404":
+          description: Resume DOCX not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +88,86 @@ components:
           type: string
       required:
         - status
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+    ResumeContact:
+      type: object
+      properties:
+        phone: { type: string }
+        email: { type: string }
+        location: { type: string }
+        github: { type: string }
+      required: [phone, email, location, github]
+    ResumeRole:
+      type: object
+      properties:
+        title: { type: string }
+        company: { type: string }
+        location: { type: string }
+        dates: { type: string }
+        bullets:
+          type: array
+          items: { type: string }
+      required: [title, company, location, dates, bullets]
+    ResumeProject:
+      type: object
+      properties:
+        name: { type: string }
+        stack: { type: string }
+        url: { type: string }
+        description: { type: string }
+      required: [name, stack, url, description]
+    ResumeSkillGroup:
+      type: object
+      properties:
+        category: { type: string }
+        items: { type: string }
+      required: [category, items]
+    ResumeEducation:
+      type: object
+      properties:
+        degree: { type: string }
+        school: { type: string }
+        location: { type: string }
+        dates: { type: string }
+        detail: { type: string }
+      required: [degree, school, location, dates, detail]
+    Resume:
+      type: object
+      properties:
+        name: { type: string }
+        headline: { type: string }
+        contact:
+          $ref: "#/components/schemas/ResumeContact"
+        summary: { type: string }
+        workExperience:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResumeRole"
+        projects:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResumeProject"
+        skills:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResumeSkillGroup"
+        education:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResumeEducation"
+      required:
+        - name
+        - headline
+        - contact
+        - summary
+        - workExperience
+        - projects
+        - skills
+        - education
 

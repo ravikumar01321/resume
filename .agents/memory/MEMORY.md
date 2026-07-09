@@ -1,0 +1,1 @@
+- [jspdf blocked by package firewall](jspdf-firewall-block.md) — jspdf (all versions tried) is blocked; use pdf-lib instead for PDF generation in scripts.
