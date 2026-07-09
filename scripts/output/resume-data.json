@@ -7,17 +7,17 @@
     "location": "Hyderabad, Telangana",
     "github": "https://github.com/ravikumar01321"
   },
-  "summary": "Computer Science undergraduate with hands-on training in software development and a track record of building full working systems, from secure banking platforms to AI-driven proctoring tools. Strong fundamentals in programming, databases, and problem-solving, with a drive to build practical, real-world software.",
+  "summary": "Third-year Computer Science undergraduate who turns coursework into working software -- a full-stack banking system and a computer-vision exam proctoring tool -- rather than leaving it on paper. Trained hands-on in industrial software development at NSIC-ECIL and comfortable owning a project end-to-end, from database design to a working demo.",
   "workExperience": [
     {
-      "title": "Student Trainee",
+      "title": "Student Trainee -- Software Development",
       "company": "NSIC Technical Services Centre, ECIL",
       "location": "Hyderabad, Telangana",
       "dates": "2024 - 2025",
       "bullets": [
-        "Completed hands-on industrial training in software development, covering the full lifecycle from design to implementation of real-world applications.",
-        "Worked with industry-standard tools and technologies to build and debug academic and practical projects under professional guidance.",
-        "Strengthened core programming, problem-solving, and debugging skills through structured practical sessions."
+        "Completed a structured industrial training program covering the full software development lifecycle, from requirements and design to implementation and testing of real applications.",
+        "Built and debugged multiple academic and practical projects using industry-standard tools, applying professional coding and version-control practices.",
+        "Sharpened problem-solving and debugging discipline through daily hands-on lab sessions under engineer supervision."
       ]
     }
   ],
@@ -26,13 +26,13 @@
       "name": "Banking Management System",
       "stack": "Java, SQL, DBMS",
       "url": "github.com/ravikumar01321",
-      "description": "Built a secure banking application supporting account management, deposits, withdrawals, and transaction history, backed by a relational database design for data integrity and auditability."
+      "description": "Designed and built a full banking application covering account creation, deposits, withdrawals, and transaction history, backed by a normalized relational schema for data integrity, auditability, and fast lookups."
     },
     {
       "name": "AI-Based Exam Proctoring System",
       "stack": "Python, OpenCV, Machine Learning",
       "url": "github.com/ravikumar01321",
-      "description": "Developed an AI-powered proctoring tool that uses real-time computer vision to detect suspicious activity during online exams, helping ensure exam integrity without manual supervision."
+      "description": "Built an AI-powered proctoring tool using real-time computer vision to flag suspicious behavior during online exams, enabling reliable, unattended exam monitoring at scale."
     }
   ],
   "skills": [
@@ -62,8 +62,8 @@
       "degree": "B.Tech, Computer Science & Engineering",
       "school": "Kommuri Pratap Reddy Institute of Technology",
       "location": "Hyderabad, Telangana",
-      "dates": "2025 - Present",
-      "detail": ""
+      "dates": "2025 - 2028 (Expected)",
+      "detail": "Currently in 3rd Year"
     },
     {
       "degree": "Diploma in Computer Science & Engineering",
