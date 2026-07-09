@@ -1,5 +1,5 @@
 import { useGetResume } from "@workspace/api-client-react";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { 
   MapPin, Mail, Phone, Github, 
   Download, ExternalLink, Briefcase, 
@@ -44,7 +44,7 @@ export default function Home() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } }
   };
 
   return (
@@ -55,7 +55,7 @@ export default function Home() {
         <motion.header 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: easeOut }}
           className="mb-20"
         >
           <h1 className="text-5xl md:text-7xl font-display font-extrabold tracking-tight text-foreground mb-4">
